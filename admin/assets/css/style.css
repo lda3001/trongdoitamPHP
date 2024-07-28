@@ -1,0 +1,235 @@
+/* ! SETTING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+:root {
+    /* font-size */
+    --fs-12: 12px;
+    --fs-14: 14px;
+    --fs-16: 16px;
+    --fs-18: 18px;
+    --fs-20: 20px;
+    --color-default: #c2410c;
+    --color-white-orange: #fff7ed;
+    --bg-black: #020617;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* ^ class tự tạo */
+.hover-color-orange:hover {
+    cursor: pointer;
+    color: var(--color-default);
+    transition: 0.3s all;
+}
+
+.hover-color-blue:hover {
+    color: #0ea5e9;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.hover-color-white:hover {
+    color: var(--color-white-orange);
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.hover-bg-blue:hover{
+    background: #0ea5e9;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.hover-bg-orange:hover{
+    background: #f97316;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.flex-align-center{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 5px;
+}
+.over-flow-x{
+    overflow-x: hidden;
+}
+/* margin */
+.mb5{
+    margin-bottom: 5px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.mt50{
+    margin-top: 50px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb30{
+    margin-bottom: 30px;
+}
+.mb106{
+    margin-bottom: 106px;
+}
+/* padding */
+.pt10 {
+    padding-top: 10px;
+}
+.px10-py5{
+    padding: 5px 10px;
+}
+.px10-py20{
+    padding: 10px 20px;
+}
+.p10{
+    padding: 10px;
+}
+.pt20{
+    padding-top: 20px;
+}
+.pt50{
+    padding-top: 50px;
+}
+.pl15{
+    padding-left: 15px;
+}
+.px12{
+    padding: 0 12px;
+}
+/* color */
+.bg-default {
+    background: var(--color-default);
+    color: var(--color-white-orange);
+}
+.bg-black{
+    background: var(--bg-black);
+}
+.color-white {
+    color: var(--color-white-orange);
+}
+
+.color-default{
+    color: var(--color-default);
+}
+.bg-gray-active{
+    background: #52525b;
+}
+/* font-size */
+.fs12{
+    font: size 12px;
+}
+.fs14 {
+    font-size: 14px;
+}
+
+.fs16 {
+    font-size: 16px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+.fs20 {
+    font-size: 20px;
+}
+
+.fs22 {
+    font-size: 22px;
+}
+.fs24{
+    font-size:24px;
+}
+.fs28{
+    font-size: 28px;
+}
+/* width - height */
+.h50{
+    height: 50px;
+}
+.w50{
+    width: 50px;
+}
+.btn-delete{
+    width: 30px;
+    height: 30px;
+    font-size:12px;
+    right: 0;
+}
+.btn-add{
+    width: 100px;
+    right: 650px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.w100{
+    width: 100px;
+}
+.w400{
+    width: 400px;
+}
+.h400{
+    height: 400px;
+}
+.wh300{
+    width: 300px;
+    height: 300px;
+}
+.w100pt{
+    width: 100%;
+}
+.h100pt{
+    height: 100%;
+}
+.h90vh{
+    height: 90vh;
+}
+
+/* ~ CSS VIẾT DƯỚI NÀY */
+.custom-menu{
+    display: none;
+    position: absolute;
+    right: 0;
+    background: var(--color-white-orange);
+    color: #333;
+}
+
+.header-user:hover .custom-menu{
+    display: block;
+}

@@ -1,0 +1,43 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*).html$ $1.php [L,QSA]
+
+
+RewriteRule ^danh-muc/([^/]+)$ danh-muc.php?cate=$1&page=1 [L,QSA]
+RewriteRule ^danh-muc/([^/]+)$ danh-muc.php?cate=$1&page=%{QUERY_STRING} [L,QSA]
+RewriteRule ^danh-muc/([^/]+)/([^/]+)$ danh-muc.php?cate=$1&subcate=$2&page=1 [L,QSA]
+RewriteRule ^danh-muc/([^/]+)/([^/]+)$ danh-muc.php?cate=$1&subcate=$2&page=%{QUERY_STRING} [L,QSA]
+
+RewriteRule ^cua-hang danh-muc.php
+RewriteRule ^san-pham/(.*)$ san-pham.php?prod=$1
+# RewriteRule ^danh-muc\.php\?search=(.*)$ cua-hang?s=$1 [L]
+# RewriteRule ^tai-khoan tai-khoan.php
+RewriteRule ^thanh-toan/order-received/(.*)$ thanh-toan.php?orderid=$1 [L,QSA]
+# RewriteRule ^tai-khoan/view-order/(.*)$ tai-khoan.php?orderid=$1 [L,QSA]
+
+    # Redirect from feedback.html to tin-tuc.php
+RewriteRule ^feedback tin-tuc.php [L]
+RewriteRule ^chinh-sach tin-tuc.php [L]
+RewriteRule ^gioi-thieu bai-viet.php [L]
+
+
+RewriteRule ^GetCategory config/Process.php
+RewriteRule ^Product/Preview/(.*)$ config/Process.php?prod=$1
+RewriteRule ^AddToCart config/Process.php
+RewriteRule ^Cart/Json config/Process.php
+RewriteRule ^Cart/Update config/Process.php
+RewriteRule ^Cart/Delete config/Process.php
+RewriteRule ^Product/ChangeOrderWay config/Process.php
+RewriteRule ^Product/ChangePageSize config/Process.php
+RewriteRule ^Product/JSON config/Process.php
+RewriteCond %{QUERY_STRING} ^term=(.*)$
+RewriteRule ^Home/Search$ config/Process.php?term=%1 [L]
+# RewriteRule ^home/searchcontent$ tim-kiem.php?term=%1 [L]
+RewriteRule ^search/([^/]+)/([0-9]+)$ search.php?searchString=$1&categoryId=$2 [L]
+
+# Quy tắc viết lại URL ảo cho home/searchcontent
+RewriteRule ^home/searchcontent$ search.php [QSA,L]
+Options -Indexes
